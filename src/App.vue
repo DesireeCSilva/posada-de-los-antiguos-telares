@@ -1,28 +1,69 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main>
+    <AppHeader v-if="!isMobileDevice" />
+    <AppHeaderMobile v-else />
+    <AppHome/>
+    <AppContact />
+    <AppFooter />
+  </main>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import AppHeader from './components/AppHeader.vue'
+import AppHeaderMobile from './components/AppHeaderMobile.vue'
+import AppContact from './components/AppContact.vue'
+import AppHome from './components/AppHome.vue'
+import AppFooter from './components/AppFooter.vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+const isMobileDevice = ref(false)
+
+const setScreenSize = () => isMobileDevice.value = window.innerWidth < 1280
+
+onMounted(() => {
+  setScreenSize()
+  window.addEventListener('resize', setScreenSize)
+})
+onBeforeUnmount(() => window.removeEventListener('resize', setScreenSize))
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+body {
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 2.5rem;
+
+  .hr_portfolio {
+    color: #CE93D8;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .title_sidebar {
+    font-size: 1.4rem;
+    font-style: bold;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    main > :not(header) {
+      padding: 1rem;
+    }
+
+    .hr_portfolio {
+      display: none;
+    }
+  }
 }
 </style>
+
