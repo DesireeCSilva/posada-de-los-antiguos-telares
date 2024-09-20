@@ -28,6 +28,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', setScreenSize))
 </script>
 
 <style lang="scss">
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -35,14 +36,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-  padding: 2.5rem;
 
-  .hr_portfolio {
-    color: #CE93D8;
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
   .title_sidebar {
     font-size: 1.4rem;
     font-style: bold;
@@ -58,10 +52,6 @@ body {
 
     main > :not(header) {
       padding: 1rem;
-    }
-
-    .hr_portfolio {
-      display: none;
     }
   }
 }
