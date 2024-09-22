@@ -2,8 +2,13 @@
   <main>
     <AppHeader v-if="!isMobileDevice" />
     <AppHeaderMobile v-else />
-    <AppHome/>
+    <AppHome />
+    <AppHistory />
+    <AppIndoors />
+    <AppOutdoors />
     <AppContact />
+    <AppActivities />
+    <AppPrices />
     <AppFooter />
   </main>
 </template>
@@ -13,6 +18,11 @@ import AppHeader from './components/AppHeader.vue'
 import AppHeaderMobile from './components/AppHeaderMobile.vue'
 import AppContact from './views/AppContact.vue'
 import AppHome from './views/AppHome.vue'
+import AppHistory from './views/AppHistory.vue'
+import AppIndoors from './views/AppIndoors.vue'
+import AppOutdoors from './views/AppOutdoors.vue'
+import AppActivities from './views/AppActivities.vue'
+import AppPrices from './views/AppPrices.vue'
 import AppFooter from './components/AppFooter.vue'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
@@ -33,9 +43,9 @@ body {
   margin: 0;
   box-sizing: border-box;
   min-height: 100vh;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
 
   .title_sidebar {
     font-size: 1.4rem;

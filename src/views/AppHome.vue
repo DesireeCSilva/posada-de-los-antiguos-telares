@@ -1,6 +1,10 @@
 <template>
-    <section class="section-home">
-        <div section-home-top>
+    <section id="home" class="section-home">
+        <div class="section-home_top">
+            <div class="home-top-text">
+                <h1>Bienvenido a Posada de los Antiguos Telares</h1>
+                <p class="section-home-text">Sea bienvenid@ a la Posada de los Antiguos Telares, su mejor elección si busca casas rurales en Guadalajara para desconectar y evadirse de las preocupaciones de la vida moderna. <br>Deseamos que, desde ahora mismo, sienta esta casa como la suya propia. En la posada de los Antiguos Telares tenemos un sólo propósito: agradarle y atenderle como usted se merece, ofreciéndole siempre la mejor experencia que podrá encontrar en su búsqueda de hoteles rurales en Guadalajara, con la mejor calidad y a un precio realmente asequible para todos los bolsillos. </p>
+            </div>
             <div class="home-carousel">
             <img class="carousel-image" src="@/assets/rooms/cabecera01.jpg" alt="Imagen 1">
             <img class="carousel-image" src="@/assets/rooms/cabecera02.jpg" alt="Imagen 2">
@@ -11,11 +15,17 @@
             <img class="carousel-image" src="@/assets/rooms/cabecera07.jpg" alt="Imagen 7">
             <img class="carousel-image" src="@/assets/rooms/cabecera08.jpg" alt="Imagen 8">
             </div>
-            <h1>Bienvenido a Posada de los Antiguos Telares</h1>
-            <p>Sea bienvenid@ a la Posada de los Antiguos Telares, su mejor elección si busca casas rurales en Guadalajara para desconectar y evadirse de las preocupaciones de la vida moderna. Deseamos que, desde ahora mismo, sienta esta casa como la suya propia.</p>
+        </div>
+
+        <div class="section-home-bottom">
             <button class="button_header">
-                <img class="icon-header" width="48" height="48" src="https://img.icons8.com/color/48/iphone-x.png" alt="iphone-x"/><a href="tel: 949252654">¡Contáctanos!</a>
+                <img width="48" height="48" src="https://img.icons8.com/color/48/door-opened.png" alt="door-opened"/><a href="#indoors">Ver habitaciones</a>
             </button>
+            <p class="home-top-text section-home-text">
+            Desde nuestros inicios, cada día ha supuesto para nosotros un maravilloso reto en pos de lograr la excelencia y la satisfacción de todos nuestros clientes, intentando superar siempre sus expectativas. <br>
+            Póngase en nuestras manos y no se arrepentirá. Estamos convencidos de que quedará completamente encantad@ y que, cuando busque casas rurales en Guadalajara, o hoteles rurales en Guadalajara, seremos por siempre su primera opción. <br>
+            Muchas gracias por visitarnos. Aquí tiene ya su segunda casa.</p>
+            <img class="section-home_image" src="@/assets/home/imagen-contenido01.png" alt="">   
         </div>
     </section>
 </template>
@@ -50,7 +60,39 @@ onMounted(() => {
 <style lang="scss">
 
 .section-home {
-    background-color: #F5F5F5;
+    background-color: #FDEA8D;
+}
+
+.section-home_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-home-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.home-top-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+}
+
+.home-top-text h1 {
+    color: #D2691E;
+}
+
+.section-home-text {
+    font-size: 1.2rem;
+    font-style: normal;
 }
 
 .home-carousel {
@@ -76,12 +118,13 @@ onMounted(() => {
 
 .button_header {
     background-color: #018AB5;
-    width: 10em;
+    width: auto;
     height: fit-content;
     font-size: 1.3rem;
-    font-family: 'Poppins';
-    padding: 0.5rem 0;
-    border-radius: 0.50rem;
+    font-weight: 700;
+    font-family: "Nunito Sans", sans-serif;
+    padding: 0.5rem 1.2rem 0.5rem 1rem;
+    border-radius: 4rem;
     border: none;
     cursor: pointer;
     text-decoration: none;
@@ -102,6 +145,12 @@ onMounted(() => {
     text-decoration: none;
     color: #000000;
     }
+}
+
+.section-home_image {
+    width: 60%;
+    height: auto;
+    margin-bottom: 1.5rem;
 }
 
 </style>

@@ -1,10 +1,10 @@
 <template>
-    <section>
+    <section id="history">
         
     </section>
 </template>
 
-<scrip tsetup>
+<scrip setup>
 
 </scrip>
 

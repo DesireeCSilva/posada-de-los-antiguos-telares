@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <section id="contact">
         
-    </div>
+    </section>
 </template>
 
 <scrip setup>

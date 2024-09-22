@@ -6,29 +6,28 @@
                         <img class="logotipo" src="../assets/logotipos/logotipo.png" alt="logotipo de Posada de los Antiguos Telares">
                     </li>
                     <li class="main-menu_item">
-                        <a href="" class="main-menu_link">Inicio</a>
+                        <a href="#home" class="main-menu_link">Inicio</a>
                     </li>
                     <li class="main-menu_item">
-                        <a href="" class="main-menu_link">Historia</a>
+                        <a href="#history" class="main-menu_link">Historia</a>
                     </li>
                     <li class="main-menu_item">
-                        <a href="" class="main-menu_link">Exterior</a>
+                        <a href="#outdoors" class="main-menu_link">Exterior</a>
                     </li> 
                     <li class="main-menu_item">
-                        <a href="" class="main-menu_link">Interior</a>
+                        <a href="#indoors" class="main-menu_link">Interior</a>
                     </li>
                     <li class="main-menu_item">
-                        <a href="" class="main-menu_link">Actividades</a>
+                        <a href="#activities" class="main-menu_link">Actividades</a>
                     </li>
                     <li class="main-menu_item">
-                        <a href="" class="main-menu_link">Tarifas</a>
+                        <a href="#prices" class="main-menu_link">Tarifas</a>
                     </li>
                     <li class="main-menu_item">
-                        <a href="" class="main-menu_link">Contacto</a>
+                        <a href="#contact" class="main-menu_link">Contacto</a>
                     </li>
                 </ul>
             </nav>
-
     </header>
 </template>
 
@@ -76,8 +75,6 @@
     font-size: 1.2rem; 
     }
 }
-
-
 
 .icon_header {
     display: flex;
