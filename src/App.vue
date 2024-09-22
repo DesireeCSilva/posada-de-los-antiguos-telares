@@ -11,8 +11,8 @@
 <script setup>
 import AppHeader from './components/AppHeader.vue'
 import AppHeaderMobile from './components/AppHeaderMobile.vue'
-import AppContact from './components/AppContact.vue'
-import AppHome from './components/AppHome.vue'
+import AppContact from './views/AppContact.vue'
+import AppHome from './views/AppHome.vue'
 import AppFooter from './components/AppFooter.vue'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 

@@ -1,0 +1,107 @@
+<template>
+    <section class="section-home">
+        <div section-home-top>
+            <div class="home-carousel">
+            <img class="carousel-image" src="@/assets/rooms/cabecera01.jpg" alt="Imagen 1">
+            <img class="carousel-image" src="@/assets/rooms/cabecera02.jpg" alt="Imagen 2">
+            <img class="carousel-image" src="@/assets/rooms/cabecera03.jpg" alt="Imagen 3">
+            <img class="carousel-image" src="@/assets/rooms/cabecera04.jpg" alt="Imagen 4">
+            <img class="carousel-image" src="@/assets/rooms/cabecera05.jpg" alt="Imagen 5">
+            <img class="carousel-image" src="@/assets/rooms/cabecera06.jpg" alt="Imagen 6">
+            <img class="carousel-image" src="@/assets/rooms/cabecera07.jpg" alt="Imagen 7">
+            <img class="carousel-image" src="@/assets/rooms/cabecera08.jpg" alt="Imagen 8">
+            </div>
+            <h1>Bienvenido a Posada de los Antiguos Telares</h1>
+            <p>Sea bienvenid@ a la Posada de los Antiguos Telares, su mejor elección si busca casas rurales en Guadalajara para desconectar y evadirse de las preocupaciones de la vida moderna. Deseamos que, desde ahora mismo, sienta esta casa como la suya propia.</p>
+            <button class="button_header">
+                <img class="icon-header" width="48" height="48" src="https://img.icons8.com/color/48/iphone-x.png" alt="iphone-x"/><a href="tel: 949252654">¡Contáctanos!</a>
+            </button>
+        </div>
+    </section>
+</template>
+
+
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+    const images = document.querySelectorAll('.carousel-image')
+    let currentIndex = 0
+
+    function showImage(index) {
+    images.forEach((img) => img.classList.remove('active'))
+    images[index].classList.add('active')
+    }
+
+    function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length
+    showImage(currentIndex)
+    }
+
+    // Show the first image initially
+    showImage(currentIndex)
+
+    // Change the image every 4 seconds
+    setInterval(nextImage, 4000)
+})
+</script>
+
+
+<style lang="scss">
+
+.section-home {
+    background-color: #F5F5F5;
+}
+
+.home-carousel {
+    width: 100%;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-image {
+    display: none;
+    width: auto;
+    max-width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+    display: block;
+    opacity: 1;
+}
+
+.button_header {
+    background-color: #018AB5;
+    width: 10em;
+    height: fit-content;
+    font-size: 1.3rem;
+    font-family: 'Poppins';
+    padding: 0.5rem 0;
+    border-radius: 0.50rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+    &:hover {
+    background-color: #99CCFF;
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    a {
+    text-decoration: none;
+    color: #000000;
+    }
+}
+
+</style>

@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <section>
         
-    </div>
+    </section>
 </template>
 
-<scrip tsetup>
+<scrip setup>
 
 </scrip>
 
