@@ -66,7 +66,6 @@ footer {
     background-color: #99CCFF;
 }
 
-
 .main-menu {
     width: 100%;
     list-style: none;
