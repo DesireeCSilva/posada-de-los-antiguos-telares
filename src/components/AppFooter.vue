@@ -6,23 +6,23 @@
                         <img class="logotipo" src="../assets/logotipos/logotipo.png" alt="logotipo de Posada de los Antiguos Telares">
                     </li>
                     <li class="main-menu_item">
-                        <a href="" class="main-menu_link">Inicio</a>
+                        <router-link to="#home" class="main-menu_link">Inicio</router-link>
                     </li>
                     <li class="main-menu_item">
-                        <a href="" class="main-menu_link">Exterior</a>
+                        <router-link to="#outdoors" class="main-menu_link">Exterior</router-link>
                     </li> 
                     <li class="main-menu_item">
-                        <a href="" class="main-menu_link">Interior</a>
+                        <router-link to="#indoors" class="main-menu_link">Interior</router-link>
                     </li>
                     <li class="main-menu_item">
-                        <a href="" class="main-menu_link">Tarifas</a>
+                        <router-link to="#prizes" class="main-menu_link">Tarifas</router-link>
                     </li>
                     <li class="main-menu_item">
-                        <a href="" class="main-menu_link">Contacto</a>
+                        <router-link to="#contact" class="main-menu_link">Contacto</router-link>
                     </li>
                     <li class="main-menu_item">
                         <button class="button_header">
-                            <img class="icon-header" width="48" height="48" src="https://img.icons8.com/color/48/iphone-x.png" alt="iphone-x"/><a href="tel: 949252654">¡Contáctanos!</a>
+                            <img class="icon-header" width="48" height="48" src="https://img.icons8.com/color/48/iphone-x.png" alt="iphone-x"/><router-link to="tel: 949252654">¡Contáctanos!</router-link>
                         </button>
                     </li>
                 </ul> 

@@ -2,13 +2,9 @@
   <main>
     <AppHeader v-if="!isMobileDevice" />
     <AppHeaderMobile v-else />
-    <AppHome />
-    <AppHistory />
-    <AppIndoors />
-    <AppOutdoors />
-    <AppContact />
-    <AppActivities />
-    <AppPrices />
+    
+    <router-view />
+    
     <AppFooter />
   </main>
 </template>
@@ -16,13 +12,6 @@
 <script setup>
 import AppHeader from './components/AppHeader.vue'
 import AppHeaderMobile from './components/AppHeaderMobile.vue'
-import AppContact from './views/AppContact.vue'
-import AppHome from './views/AppHome.vue'
-import AppHistory from './views/AppHistory.vue'
-import AppIndoors from './views/AppIndoors.vue'
-import AppOutdoors from './views/AppOutdoors.vue'
-import AppActivities from './views/AppActivities.vue'
-import AppPrices from './views/AppPrices.vue'
 import AppFooter from './components/AppFooter.vue'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
@@ -38,7 +27,6 @@ onBeforeUnmount(() => window.removeEventListener('resize', setScreenSize))
 </script>
 
 <style lang="scss">
-
 body {
   margin: 0;
   box-sizing: border-box;
@@ -66,4 +54,3 @@ body {
   }
 }
 </style>
-

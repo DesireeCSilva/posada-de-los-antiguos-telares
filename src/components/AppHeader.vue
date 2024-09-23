@@ -1,35 +1,36 @@
 <template>
     <header>
         <nav class="header">
-                <ul id="main-menu" class="main-menu">
-                    <li>
-                        <img class="logotipo" src="../assets/logotipos/logotipo.png" alt="logotipo de Posada de los Antiguos Telares">
-                    </li>
-                    <li class="main-menu_item">
-                        <a href="#home" class="main-menu_link">Inicio</a>
-                    </li>
-                    <li class="main-menu_item">
-                        <a href="#history" class="main-menu_link">Historia</a>
-                    </li>
-                    <li class="main-menu_item">
-                        <a href="#outdoors" class="main-menu_link">Exterior</a>
-                    </li> 
-                    <li class="main-menu_item">
-                        <a href="#indoors" class="main-menu_link">Interior</a>
-                    </li>
-                    <li class="main-menu_item">
-                        <a href="#activities" class="main-menu_link">Actividades</a>
-                    </li>
-                    <li class="main-menu_item">
-                        <a href="#prices" class="main-menu_link">Tarifas</a>
-                    </li>
-                    <li class="main-menu_item">
-                        <a href="#contact" class="main-menu_link">Contacto</a>
-                    </li>
-                </ul>
-            </nav>
+            <ul id="main-menu" class="main-menu">
+                <li>
+                    <img class="logotipo" src="../assets/logotipos/logotipo.png" alt="logotipo de Posada de los Antiguos Telares">
+                </li>
+                <li class="main-menu_item">
+                    <router-link to="/" class="main-menu_link">Inicio</router-link>
+                </li>
+                <li class="main-menu_item">
+                    <router-link to="/history" class="main-menu_link">Historia</router-link>
+                </li>
+                <li class="main-menu_item">
+                    <router-link to="/outdoors" class="main-menu_link">Exterior</router-link>
+                </li> 
+                <li class="main-menu_item">
+                    <router-link to="/indoors" class="main-menu_link">Interior</router-link>
+                </li>
+                <li class="main-menu_item">
+                    <router-link to="/activities" class="main-menu_link">Actividades</router-link>
+                </li>
+                <li class="main-menu_item">
+                    <router-link to="/prices" class="main-menu_link">Tarifas</router-link>
+                </li>
+                <li class="main-menu_item">
+                    <router-link to="/contact" class="main-menu_link">Contacto</router-link>
+                </li>
+            </ul>
+        </nav>
     </header>
 </template>
+
 
 <scrip setup>
 
@@ -63,17 +64,27 @@
     cursor: pointer;
     border: none;
 }
+
 .main-menu_link {
     text-decoration: none;
     color: inherit;
     position: relative;
-    font-size: 1rem;
-    transition: font-size 0.3s ease-in-out;
+    font-size: .9rem;
+    transition: font-size 0.3s ease-in-out, background-color 0.3s ease;
+    padding: 0.5rem 1rem; 
 
     &:hover,
     &:active {
-    font-size: 1.2rem; 
+        background-color: rgba(255, 255, 255, 0.3); 
+        font-size: 1rem; 
+        border-radius: 5px; 
     }
+}
+
+.main-menu_link:active {
+    transform: skew(20deg, 10deg);
+
+    transition: transform 0.1s ease; // Transición rápida para el efecto
 }
 
 .icon_header {

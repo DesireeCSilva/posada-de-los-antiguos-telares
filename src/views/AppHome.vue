@@ -19,14 +19,19 @@
 
         <div class="section-home-bottom">
             <button class="button_header">
-                <img width="48" height="48" src="https://img.icons8.com/color/48/door-opened.png" alt="door-opened"/><a href="#indoors">Ver habitaciones</a>
+                <img width="48" height="48" src="https://img.icons8.com/color/48/door-opened.png" alt="door-opened"/><router-link to="#indoors">Ver habitaciones</router-link>
             </button>
             <p class="home-top-text section-home-text">
             Desde nuestros inicios, cada día ha supuesto para nosotros un maravilloso reto en pos de lograr la excelencia y la satisfacción de todos nuestros clientes, intentando superar siempre sus expectativas. <br>
             Póngase en nuestras manos y no se arrepentirá. Estamos convencidos de que quedará completamente encantad@ y que, cuando busque casas rurales en Guadalajara, o hoteles rurales en Guadalajara, seremos por siempre su primera opción. <br>
             Muchas gracias por visitarnos. Aquí tiene ya su segunda casa.</p>
-            <img class="section-home_image" src="@/assets/home/imagen-contenido01.png" alt="">   
+            <img class="section-home_image" src="@/assets/home/imagen-contenido01.png" alt="Imagen del Spa">
+            <button class="button_header">
+                <img width="48" height="48" src="https://img.icons8.com/color/48/old-sofa.png" alt="old-sofa"/><router-link to="#contact">Solicitar mi reserva</router-link>
+            </button>   
         </div>
+
+
     </section>
 </template>
 
@@ -76,6 +81,7 @@ onMounted(() => {
     justify-content: center;
     align-items: center;
     margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .home-top-text{
