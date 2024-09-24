@@ -15,7 +15,7 @@
                 <p class="section-home-text home-top-text">El encanto de nuestro pueblo reside en su privilegiada ubicación en la ladera de la vega del río Ungría, que nos regala panorámicas impresionantes. Nuestro término municipal es un tesoro escondido, salpicado de numerosas fuentes con siglos de historia. Estas fuentes, además de ser un regalo para la vista con sus caños y abrevaderos singulares —como los de Los Praillos o el Vallejo Villar—, siguen siendo fundamentales para el cuidado de nuestro ganado y la tierra, manteniendo vivas nuestras tradiciones.</p>
             </div>        
             <button style="margin-bottom: 1.5rem;" class="button_header">
-                <img width="48" height="48" src="https://img.icons8.com/color/48/old-sofa.png" alt="old-sofa"/><router-link to="/contact">Ver actividades en Atanzón</router-link>
+                <img width="48" height="48" src="https://img.icons8.com/color/48/rucksack.png" alt="rucksack"/><router-link to="/activities">Ver actividades en Atanzón</router-link>
         </button> 
         </div>
  
@@ -35,6 +35,7 @@
     align-items: center;
     text-align: center;
 }
+
 .outdoors-top_images {
     display: flex;
     gap: 1.5rem;

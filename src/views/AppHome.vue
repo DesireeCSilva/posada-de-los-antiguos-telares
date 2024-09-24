@@ -93,6 +93,7 @@ onMounted(() => {
 
 h1 {
     color: #D2691E;
+    text-align: center;
 }
 
 .section-home-text {
