@@ -26,12 +26,8 @@
                     <img class="indoors-image" src="@/assets/indoors/indoors-10.jpg" alt="Foto de una de las habitaciones de la Posada de los Antiguos Telares">
                     <img class="indoors-image" src="@/assets/indoors/indoors-07.jpg" alt="Foto de una de las habitaciones de la Posada de los Antiguos Telares">
                 </div>
-
-
             </div>
-
         </div>
-        
     </section>
 </template>
 

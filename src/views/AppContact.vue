@@ -1,12 +1,20 @@
 <template>
-        <section id="contact">
+    <section id="contact">
         <div class="section-contact">
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.302243826528!2d-3.0031888243207194!3d40.66730897715915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4303f2a3e64f4f%3A0xea823283ddb77d98!2sPosada%20de%20los%20Antiguos%20Telares!5e0!3m2!1ses!2sus!4v1727201595497!5m2!1ses!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+            <h1>Actividades interesantes en la zona</h1>
+            <p class="home-top-text section-home-text"> 
+                POSADA DE LOS ANTIGUOS TELARES<br> 
+                Calle de la Iglesia, 1<br> 
+                CP: 19153. Atanzón, Guadalajara. (ESPAÑA) <br>
+                Tel. 949 252 654
+            </p>
 
-        <form v-if="!mostrarMensaje" class="form_section-05">
-            <div class="top-form">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.302243826528!2d-3.0031888243207194!3d40.66730897715915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4303f2a3e64f4f%3A0xea823283ddb77d98!2sPosada%20de%20los%20Antiguos%20Telares!5e0!3m2!1ses!2sus!4v1727201595497!5m2!1ses!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            
+            <h1>Actividades interesantes en la zona</h1>
+            <form v-if="!mostrarMensaje" class="contact-form">
+                
                 <div class="input-container">
                     <label for="nombre"></label>
                     <input
@@ -15,7 +23,7 @@
                     type="text"
                     class="input-form"
                     v-model="nombre"
-                    placeholder="Nombre"
+                    placeholder="Nombre y apellidos"
                     />
                 </div>
                 <div class="input-container">
@@ -29,8 +37,18 @@
                     placeholder="Email"
                     />
                 </div>
-            </div>
-            <div class="bottom-form">
+                <div class="input-container">
+                    <label for="teléfono"></label>
+                    <input
+                    id="teléfono"
+                    name="teléfono"
+                    type="text"
+                    class="input-form"
+                    v-model="teléfono"
+                    placeholder="Teléfono"
+                    />
+                </div>
+                <div class="input-container">
                 <label for="Comentarios"></label>
                 <input
                 id="comentarios"
@@ -40,56 +58,29 @@
                 v-model="comentarios"
                 placeholder="Comentarios"
                 />
+                </div>
+                <button class="button_header" type="submit" value="Enviar" @click="sendEmail">
+                    <img width="48" height="48" src="https://img.icons8.com/color/48/old-sofa.png" alt="old-sofa">
+                    <router-link to="/contact">Enviar formulario</router-link>
+                </button>  
+            </form>
+            <div class="sweet-alert" v-else>
+                <p>Tu formulario ha sido enviado con éxito. <br>¡Gracias por tu mensaje!</p>
             </div>
-            <div class="content-button_section-05">
-            <button
-            type="submit"
-            class="button-send_section-05"
-            value="Enviar"
-            @click="sendEmail"
-            >
-            <img
-                class="icon_section-05"
-                src=""
-                alt=""
-                />Enviar
-          </button>
-          <button class="button-whatsapp_section-05" value="WhatsApp">
-            <a href="tel:675937952" target="_blank">
-              <img
-                class="icon_section-05"
-                src=""
-                alt=""
-              />¡WhatsApp!</a
-            >
-          </button>
-          <button class="button-call_section-05">
-            <a href="mailto:desiree_cs@hotmail.com" target="_blank">
-              <img
-                class="icon_section-05"
-                src=""
-                alt=""
-              />Contáctame
-            </a>
-          </button>
         </div>
-      </form>
-      <div class="sweet-alert" v-else>
-        <p>Tu formulario ha sido enviado con éxito. <br>¡Gracias por tu mensaje!</p>
-      </div>
     </section>
 
-  </template>
-  
-  <script setup>
+</template>
+
+<script setup>
 //   import { ref } from 'vue'
 //   import emailjs from '@emailjs/browser';
-  
+
 //   const nombre = ref(undefined)
 //   const email = ref(undefined)
 //   const comentarios = ref(undefined)
 //   const mostrarMensaje = ref(false)
-  
+
 //   const sendEmail = (e) => {
 //     const params = {
 //       nombre: nombre.value,
@@ -109,293 +100,72 @@
 //       (err) => console.log('FAILED...', err)
 //     )
 //   }
-  
-  </script>
-  
-  <style lang="scss">
-  
-  .section-05 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    gap: 2rem;
-    width: auto;
-    box-sizing: border-box;
-  }
-  
-  .text_section-05 {
-    width: 50%;
-    height: auto;
-    background-color: #e1bee7;
-    border-radius: 30px;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-  
-  .form_section-05 {
-    border: solid 2px #ffccbc;
-    border-radius: 30px;
-    width: 100%;
-    height: auto;
-    padding: 1.5rem;
+
+</script>
+
+<style lang="scss">
+.section-contact {
+    background-color: #FDEA8D;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-  }
-  .top-form {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between; 
-    box-sizing: border-box;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .bottom-form {
-    display: flex;
-    width: 100%;
-  }
-  
-  .input-container {
-    flex: 1; 
+    text-align: center;
+}
+
+.contact-form {
+    margin: 1.5rem 1.5rem;
+    background-color: #D2691E;
+    border-radius: 60px;
+    width: 50rem;
+    height: auto;
+    padding: 4rem;
     display: flex;
     flex-direction: column;
-  }
-  .input-form {
+    justify-content: center;
+    align-items: center;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.input-form {
     width: 100%;
     height: 3rem;
-    border: solid 2px #ffccbc;
+    border: solid 2px #D2691E;
     border-radius: 20px;
-    margin: 1rem 0; 
+    font-family: "Nunito Sans", sans-serif;
     font-size: 1rem;
-    font-family: "Poppins";
     padding-left: 1rem;
-    box-sizing: border-box;
-  }
-  
-  .content-button_section-05 {
-    display: flex;
-    flex-direction: row;
+    margin: 1rem 0;
+}
+
+.input-placeholder {
     width: 100%;
-    justify-content: space-between;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    align-items: center;
-    margin: 1rem 0; 
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .input-placeholder {
-    width: 100%;
-    height: 6rem;
-    border: solid 2px #ffccbc;
+    height: 9rem;
+    border: solid 2px #D2691E;
     border-radius: 20px;
+    font-family: "Nunito Sans", sans-serif;
     font-size: 1rem;
-    font-family: "Poppins";
     padding-left: 1rem;
-    box-sizing: border-box; 
-  }
-  
-  .icon_section-05 {
-    width: fit-content;
-    height: fit-content;
-    margin-right: 0.3rem;
-  }
-  
-  .button-send_section-05 {
-    background-color: #ce93d8;
-    width: 10em;
-    height: fit-content;
-    font-size: 1.3rem;
-    font-family: "Poppins";
-    padding: 0.5rem 0;
-    border-radius: 0.5rem;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-  
-    &:hover {
-      background-color: #ce93d8;
-      transform: scale(0.95);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-  
-    &:active {
-      background-color: #bc38d3;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      transform: translateY(2px);
-    }
-  }
-  
-  .button-whatsapp_section-05 {
-    background-color: #f8bbd0;
-    width: 10em;
-    height: fit-content;
-    font-size: 1.3rem;
-    font-family: "Poppins";
-    padding: 0.5rem 0;
-    border-radius: 0.5rem;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-  
-    &:hover {
-      background-color: #f8bbd0;
-      transform: scale(0.95);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-  
-    &:active {
-      background-color: #ee427e;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      transform: translateY(2px);
-    }
-  }
-  
-  .button-call_section-05 {
-    background-color: #ffccbc;
-    width: 10em;
-    height: fit-content;
-    font-size: 1.3rem;
-    font-family: "Poppins";
-    padding: 0.5rem 0;
-    border-radius: 0.5rem;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-  
-    &:hover {
-      background-color: #ffccbc;
-      transform: scale(0.95);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-  
-    &:active {
-      background-color: #fa8662;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      transform: translateY(2px);
-    }
-  }
-  
-  .button-call_section-05,
-  .button-send_section-05,
-  .button-whatsapp_section-05 {
-    a {
-      display: flex;
-      text-decoration: none;
-      color: #000000;
-    }
-  }
-  
-  .sweet-alert {
+    margin: 1rem 0;
+    
+}
+
+.sweet-alert {
     background-color: #fa8662;
     border-radius: 30px;
     padding: 1rem;
     width: auto;
-  
-    p {
-      font-family: 'Poppins';
-      font-size: 2.5rem;
-      color: #ffffff;
-      text-align: center;
-    }
-  }
 
-  
-  // Medias Queries
-  
-  @media only screen and (max-width: 768px) {
-  
-    .text_descriptions {    
-      font-size: 1.1rem;
+    p {
+        font-family: 'Poppins';
+        font-size: 2.5rem;
+        color: #ffffff;
+        text-align: center;
     }
-    .section-05 {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    
-    }
-    
-    .text_section-05 {
-      width: 100%;
-    }
-  
-    .input-form,
-    .input-placeholder {
-      width: 100%;
-      margin: 0.5rem 0; 
-      box-sizing: border-box;
-    }
-  
-    .top-form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 0;
-    }
-  
-    .input-placeholder {
-      width: 100%;
-    }
-  
-    .content-button_section-05 {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      align-items: center;
-      gap: 0.5rem;
-    }
-  
-    .button-send_section-05,
-    .button-whatsapp_section-05,
-    .button-call_section-05 {
-      width: 100%;
-      margin: 0.5rem 0;
-    }
-  }
-  
-  @media only screen and (min-width: 1024px) and (max-width: 1240px){
-  
-    .content-button_section-05 {
-      display: flex;
-      justify-content: space-evenly;
-      gap: .5rem
-    }
-    .button-send_section-05,
-    .button-whatsapp_section-05,
-    .button-call_section-05 {
-      width: 80%;
-      margin: 0.5rem 0;
-    }
-  }
-  
-  @media only screen and (min-width: 1920px) {
-  
-    .section-05 {
-      gap: 5.5rem;
-    }
-  }
-  
-  </style>
-  
+}
+</style>
