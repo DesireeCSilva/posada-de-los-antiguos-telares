@@ -12,18 +12,19 @@
                     <strong>Tres balcones, Tulipanes, Epoca, Oliva y Romantica.</strong>
                 </p>
                 <p class="home-top-text section-home-text"></p>
-                <ol>
+                <ul class="notice-list">
                     <li>
-                    TEMPORADA BAJA. De domingo a jueves no festivos ni visperas de festivos, ni fechas determinadas como temporada alta.
+                    <strong>TEMPORADA BAJA.</strong> De domingo a jueves no festivos ni visperas de festivos, ni fechas determinadas como temporada alta.
                     </li>
                     <li>
-                    TEMPORADA MEDIA. Viernes y sábado, visperas de festivos, puentes, ni fechas determinadas como temporada alta.
+                    <strong>TEMPORADA MEDIA.</strong> Viernes y sábado, visperas de festivos, puentes, ni fechas determinadas como temporada alta.
                     </li>
                     <li>
-                    TEMPORADA ALTA. Semana Santa, Navidades, Año Nuevo (a determinar los días)
+                    <strong>TEMPORADA ALTA.</strong> Semana Santa, Navidades, Año Nuevo (a determinar los días)
                     </li>
-                </ol>
+                </ul>
             </div>
+
             <div class="prices-tables">
                 <h1>PRECIOS HABITACIONES NORMALES O DOBLES (*)</h1>
                 <table class="price-table">
@@ -116,13 +117,13 @@
                 <h1>Información importante</h1>
                 <p class="home-top-text section-home-text">
                     <ul class="notice-list">
-      <li><strong>El SPA está cerrado</strong> por reformas y mantenimiento.</li>
-      <li>Los precios son por habitación, incluyen alojamiento para dos personas y desayuno.</li>
-      <li><strong>Suplementos:</strong> Cama supletoria gratis para niños menores de 3 años. 30% del precio de la habitación.</li>
-      <li>No servimos comidas al mediodía, excepto para grupos.</li>
-      <li><strong>Cenas:</strong> Disponibles, el precio por persona y servicio oscila entre los 25€ y 30€.</li>
-      <li>Es posible concertar masajes, siempre con antelación.</li>
-    </ul>
+                        <li><strong>El SPA está cerrado</strong> por reformas y mantenimiento.</li>
+                        <li>Los precios son por habitación, incluyen alojamiento para dos personas y desayuno.</li>
+                        <li><strong>Suplementos:</strong> Cama supletoria gratis para niños menores de 3 años. 30% del precio de la habitación.</li>
+                        <li>No servimos comidas al mediodía, excepto para grupos.</li>
+                        <li><strong>Cenas:</strong> Disponibles, el precio por persona y servicio oscila entre los 25€ y 30€.</li>
+                        <li>Es posible concertar masajes, siempre con antelación.</li>
+                        </ul>
                 </p>
             </div>
         </div>
@@ -135,71 +136,71 @@
 
 <style lang="scss">
 .section-prices {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  background-color: #fdea8d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #fdea8d;
 
-  .price-table {
+.price-table {
     width: 100%;
-    max-width: 700px;
+    max-width: 40rem;
     border-collapse: collapse;
     text-align: center;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     thead {
-      background-color: #ffc107;
-      color: #333;
+        background-color: #D2691E;
+        color: #000000;
 
-      th {
+        th {
         padding: 1rem;
         font-size: 1.2rem;
-      }
+        }
     }
 
     tbody {
-      tr {
+        tr {
         &:nth-child(odd) {
-          background-color: #f1f1f1;
+            background-color: #FFFFCC;
         }
 
         &:hover {
-          background-color: #ffebc5;
+            background-color: rgba(153, 204, 255, 0.2);
         }
 
         td {
-          padding: 1rem;
-          border: 1px solid #ddd;
-          font-size: 1rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            font-size: 1rem;
         }
-      }
+        }
     }
-  }
-  .notice-list {
+}
+.notice-list {
     list-style-type: none;
     padding: 0;
     max-width: 600px;
     font-size: 1.2rem;
-    color: #333;
+    color: #000000;
     
     li {
-      margin-bottom: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-      strong {
-        color: #d9534f; /* Resaltar ciertas palabras */
-      }
+    strong {
+        color: #D2691E; 
+    }
     }
 
     li:hover {
-      background-color: #ffebc5;
+        background-color: rgba(210, 105, 30, 0.1);
     }
   }
 }
