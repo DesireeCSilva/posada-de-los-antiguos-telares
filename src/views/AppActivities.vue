@@ -1,7 +1,7 @@
 <template>
     <section id="activities">
-        <div><p>
-También merece la pena contemplar la gran cantidad de cabañas que proliferan a lo largo de todo el término, en donde antiguamente se refugiaban los pastores y labradores ante las malas condiciones climatológicas, que nos han llegado la mayoría de ellas en un buen estado de conservación. Destacan algunas por sus dimensiones y su perfecto acabado.
+        <div class="section-activities">
+            <p class="home-top-text section-home-text"> También merece la pena contemplar la gran cantidad de cabañas que proliferan a lo largo de todo el término, en donde antiguamente se refugiaban los pastores y labradores ante las malas condiciones climatológicas, que nos han llegado la mayoría de ellas en un buen estado de conservación. Destacan algunas por sus dimensiones y su perfecto acabado.
 
 Todo ello podemos disfrutarlo gracias a las rutas de senderismo y de mountain bike que podemos llevar a cabo.
 
@@ -33,6 +33,14 @@ Vino
 
 </scrip>
 
-<style>
+<style lang="scss">
+.section-activities {
+    background-color: #FDEA8D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 </style>
