@@ -1,20 +1,33 @@
 <template>
     <section id="prices">
         <div class="section-prices">
+            <h1>Nuestras tarifas</h1>
             <div class="prices-intro">
-                <h1>Nuestras tarifas</h1>
-                <p class="home-top-text section-home-text">
-                    <b>Hay dos tipos de habitaciones normales (dobles) o tipo suite.</b>
-                    <br />Las habitaciones normales o dobles
-                    <strong>Melliza Marisa, Melliza Loli y Abuelos.</strong>
-                </p>
-                <p class="home-top-text section-home-text">Las habitaciones tipo suite
-                    <strong>Tres balcones, Tulipanes, Epoca, Oliva y Romantica.</strong>
-                </p>
-                <p class="home-top-text section-home-text"></p>
+                <div class="prices-intro_top">
+                    <p class="prices-text">Las habitaciones normales o dobles
+                        <strong>Melliza Marisa, Melliza Loli y Abuelos.</strong>
+                    </p>
+                    <div class="prices-intro_image-container">
+                        <img class="prices-intro_image" src="@/assets/indoors/indoors-02.jpg" alt="">
+                        <img class="prices-intro_image" src="@/assets/indoors/indoors-02.jpg" alt="">
+                        <img class="prices-intro_image" src="@/assets/indoors/indoors-02.jpg" alt="">
+                    </div>
+                </div>
+                <div class="prices-intro_top">
+                    <p class="prices-text">Las habitaciones tipo suite 
+                        <strong>Tres balcones, Tulipanes, Época, Oliva y Romántica.</strong>
+                    </p>
+                    <div class="prices-intro_image-container">
+                        <img class="prices-intro_image" src="@/assets/indoors/indoors-02.jpg" alt="">
+                        <img class="prices-intro_image" src="@/assets/indoors/indoors-02.jpg" alt="">
+                        <img class="prices-intro_image" src="@/assets/indoors/indoors-02.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
                 <ul class="notice-list">
                     <li>
-                    <strong>TEMPORADA BAJA.</strong> De domingo a jueves no festivos ni visperas de festivos, ni fechas determinadas como temporada alta.
+                    <strong>TEMPORADA BAJA.</strong> De domingo a jueves no festivos, ni vísperas de festivos, ni fechas determinadas como temporada alta.
                     </li>
                     <li>
                     <strong>TEMPORADA MEDIA.</strong> Viernes y sábado, visperas de festivos, puentes, ni fechas determinadas como temporada alta.
@@ -23,8 +36,6 @@
                     <strong>TEMPORADA ALTA.</strong> Semana Santa, Navidades, Año Nuevo (a determinar los días)
                     </li>
                 </ul>
-            </div>
-
             <div class="prices-tables">
                 <h1>PRECIOS HABITACIONES NORMALES O DOBLES (*)</h1>
                 <table class="price-table">
@@ -115,7 +126,7 @@
             
             <div class="prices-info">
                 <h1>Información importante</h1>
-                <p class="home-top-text section-home-text">
+                <p class="prices-text section-home-text">
                     <ul class="notice-list">
                         <li><strong>El SPA está cerrado</strong> por reformas y mantenimiento.</li>
                         <li>Los precios son por habitación, incluyen alojamiento para dos personas y desayuno.</li>
@@ -123,7 +134,7 @@
                         <li>No servimos comidas al mediodía, excepto para grupos.</li>
                         <li><strong>Cenas:</strong> Disponibles, el precio por persona y servicio oscila entre los 25€ y 30€.</li>
                         <li>Es posible concertar masajes, siempre con antelación.</li>
-                        </ul>
+                    </ul>
                 </p>
             </div>
         </div>
@@ -142,6 +153,44 @@
     align-items: center;
     padding: 2rem;
     background-color: #fdea8d;
+
+    .prices-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.2rem;
+        font-style: normal;
+    }
+
+    .prices-intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+    .prices-intro_top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    .prices-intro_image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    }
+
+    .prices-intro_image {
+        width: 15rem;
+        height: auto;
+    }
+}
 
 .price-table {
     width: 100%;
@@ -202,6 +251,6 @@
     li:hover {
         background-color: rgba(210, 105, 30, 0.1);
     }
-  }
+}
 }
 </style>
