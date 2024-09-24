@@ -1,31 +1,12 @@
 <template>
     <section id="activities">
         <div class="section-activities">
-            <p class="home-top-text section-home-text"> También merece la pena contemplar la gran cantidad de cabañas que proliferan a lo largo de todo el término, en donde antiguamente se refugiaban los pastores y labradores ante las malas condiciones climatológicas, que nos han llegado la mayoría de ellas en un buen estado de conservación. Destacan algunas por sus dimensiones y su perfecto acabado.
-
-Todo ello podemos disfrutarlo gracias a las rutas de senderismo y de mountain bike que podemos llevar a cabo.
-
-La carretera finaliza en el pueblo, saliendo pistas de tierra en todas las direcciones, lo que hace que sea un espacio muy tranquilo, sin tensiones ni tráfico. En definitiva un remanso de paz, permitiendo los paseos por el campo, a pie, en bicicleta... Y todo a tan sólo cincuenta minutos de Madrid (75 kms.)?y a veinte minutos de Guadalajara (17 kms.)
-
-Y si además somos viajeros, podremos acercarnos a conocer otros muchos pueblos con encanto como:
-
-Torija
-Brihuega
-Hita
-Horche
-Sacedón (Pantanos de Entrepeñas y Buendía)
-Pastrana
-Sigüenza
-Atienza
-O rutas como:
-
-Viaje a la Alcarria
-Hayedo de Tejera Negra
-Alto Tajo
-El Quijote
-Vino
- </p></div>
-        
+            <h1>Actividades interesantes en la zona</h1>
+            <p class="home-top-text section-home-text"> Las rutas y senderos de Atanzón ofrecen una experiencia inigualable para los amantes de la naturaleza. A lo largo del término municipal, se pueden observar las antiguas cabañas que, en tiempos pasados, servían de refugio a pastores y labradores frente a las inclemencias del tiempo. Muchas de ellas se encuentran en un estado de conservación sorprendente, destacando por sus dimensiones y acabados impecables. <br>
+            El entorno invita a recorrerlo a pie o en bicicleta, gracias a sus rutas de senderismo y mountain bike, que revelan paisajes tranquilos y alejados del tráfico, ideales para desconectar. A tan solo 50 minutos de Madrid y 20 de Guadalajara, este rincón es un auténtico refugio de paz. <br>
+            Desde aquí, también es fácil explorar pueblos con encanto cercanos como Torija, Brihuega, Hita, Horche, y Pastrana, o sumergirse en rutas como el "Viaje a la Alcarria", el Hayedo de Tejera Negra, el Alto Tajo, e incluso las tierras del Quijote.
+            </p>
+        </div>    
     </section>
 </template>
 

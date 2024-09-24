@@ -1,16 +1,17 @@
 <template>
     <section id="prices">
         <div class="section-prices">
-            <h1>Nuestras tarifas</h1>
+            <h1>Nuestras habitaciones y tarifas</h1>
             <div class="prices-intro">
                 <div class="prices-intro_top">
                     <p class="prices-text">Las habitaciones normales o dobles
                         <strong>Melliza Marisa, Melliza Loli y Abuelos.</strong>
                     </p>
                     <div class="prices-intro_image-container">
+                        <img class="prices-intro_image" src="@/assets/indoors/indoors-01.jpg" alt="">
                         <img class="prices-intro_image" src="@/assets/indoors/indoors-02.jpg" alt="">
-                        <img class="prices-intro_image" src="@/assets/indoors/indoors-02.jpg" alt="">
-                        <img class="prices-intro_image" src="@/assets/indoors/indoors-02.jpg" alt="">
+                        <img class="prices-intro_image" src="@/assets/indoors/indoors-03.jpg" alt="">
+                        <img class="prices-intro_image" src="@/assets/indoors/indoors-06.jpg" alt="">
                     </div>
                 </div>
                 <div class="prices-intro_top">
@@ -18,14 +19,15 @@
                         <strong>Tres balcones, Tulipanes, Época, Oliva y Romántica.</strong>
                     </p>
                     <div class="prices-intro_image-container">
-                        <img class="prices-intro_image" src="@/assets/indoors/indoors-02.jpg" alt="">
-                        <img class="prices-intro_image" src="@/assets/indoors/indoors-02.jpg" alt="">
-                        <img class="prices-intro_image" src="@/assets/indoors/indoors-02.jpg" alt="">
+                        <img class="prices-intro_image" src="@/assets/indoors/indoors-11.jpg" alt="">
+                        <img class="prices-intro_image" src="@/assets/indoors/indoors-05.jpg" alt="">
+                        <img class="prices-intro_image" src="@/assets/indoors/indoors-04.jpg" alt="">
+                        <img class="prices-intro_image" src="@/assets/indoors/indoors-00.jpg" alt="">
                     </div>
                 </div>
             </div>
 
-                <ul class="notice-list">
+            <ul class="notice-list">
                     <li>
                     <strong>TEMPORADA BAJA.</strong> De domingo a jueves no festivos, ni vísperas de festivos, ni fechas determinadas como temporada alta.
                     </li>
@@ -33,12 +35,17 @@
                     <strong>TEMPORADA MEDIA.</strong> Viernes y sábado, visperas de festivos, puentes, ni fechas determinadas como temporada alta.
                     </li>
                     <li>
-                    <strong>TEMPORADA ALTA.</strong> Semana Santa, Navidades, Año Nuevo (a determinar los días)
+                    <strong>TEMPORADA ALTA.</strong> Semana Santa, Navidades, Año Nuevo (a determinar los días).
                     </li>
-                </ul>
-            <div class="prices-tables">
-                <h1>PRECIOS HABITACIONES NORMALES O DOBLES (*)</h1>
-                <table class="price-table">
+            </ul>            
+            <button class="button_header">
+                <img width="48" height="48" src="https://img.icons8.com/color/48/suitcase.png" alt="suitcase"/><router-link to="/contact">Solicitar mi reserva</router-link>
+            </button> 
+
+            <div class="prices_table-container">
+                <div style="display: flex, align-items: center, justify-content: center">
+                    <h1>HABITACIONES NORMALES O DOBLES</h1>
+                    <table class="price-table">
                     <thead>
                         <tr>
                             <th>Descripción</th>
@@ -78,10 +85,11 @@
                             <td>Alta</td>
                         </tr>
                     </tbody>
-                </table>   
-                
-                <h1>PRECIOS HABITACIONES TIPO SUITE</h1>
-                <table class="price-table">
+                    </table>
+                </div>   
+                <div style="display: flex, align-items: center, justify-content: center">
+                    <h1>HABITACIONES TIPO SUITE</h1>
+                    <table class="price-table">
                     <thead>
                         <tr>
                             <th>Descripción</th>
@@ -121,12 +129,12 @@
                             <td>Alta</td>
                         </tr>
                     </tbody>
-                </table>
+                    </table>
+                </div>
             </div>
-            
+
             <div class="prices-info">
                 <h1>Información importante</h1>
-                <p class="prices-text section-home-text">
                     <ul class="notice-list">
                         <li><strong>El SPA está cerrado</strong> por reformas y mantenimiento.</li>
                         <li>Los precios son por habitación, incluyen alojamiento para dos personas y desayuno.</li>
@@ -135,8 +143,11 @@
                         <li><strong>Cenas:</strong> Disponibles, el precio por persona y servicio oscila entre los 25€ y 30€.</li>
                         <li>Es posible concertar masajes, siempre con antelación.</li>
                     </ul>
-                </p>
             </div>
+            <button class="button_header">
+                <img width="48" height="48" src="https://img.icons8.com/color/48/valet.png" alt="valet"/><router-link to="/contact">Pedir más información</router-link>
+            </button> 
+            
         </div>
     </section>
 </template>
@@ -169,7 +180,8 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        gap: 1rem;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
 
     .prices-intro_top {
         display: flex;
@@ -188,10 +200,16 @@
 
     .prices-intro_image {
         width: 15rem;
-        height: auto;
+        height: 10rem;
     }
 }
 
+.prices_table-container {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 1.5rem;
+
+}
 .price-table {
     width: 100%;
     max-width: 40rem;
