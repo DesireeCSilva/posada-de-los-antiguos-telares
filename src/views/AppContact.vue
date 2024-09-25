@@ -1,6 +1,7 @@
 <template>
     <section id="contact">
         <div class="section-contact">
+            <div class="prices-top">
             <h1>Actividades interesantes en la zona</h1>
             <p class="home-top-text section-home-text"> 
                 POSADA DE LOS ANTIGUOS TELARES<br> 
@@ -9,12 +10,12 @@
                 Tel. 949 252 654
             </p>
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.302243826528!2d-3.0031888243207194!3d40.66730897715915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4303f2a3e64f4f%3A0xea823283ddb77d98!2sPosada%20de%20los%20Antiguos%20Telares!5e0!3m2!1ses!2sus!4v1727201595497!5m2!1ses!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.302243826528!2d-3.0031888243207194!3d40.66730897715915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4303f2a3e64f4f%3A0xea823283ddb77d98!2sPosada%20de%20los%20Antiguos%20Telares!5e0!3m2!1ses!2sus!4v1727201595497!5m2!1ses!2sus" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-            
-            <h1>Actividades interesantes en la zona</h1>
-            <form v-if="!mostrarMensaje" class="contact-form">
-                
+            </div>
+            <div class="prices-bottom">
+                <h1>Contacta con nosotros</h1>
+                <form v-if="!mostrarMensaje" class="contact-form">
                 <div class="input-container">
                     <label for="nombre"></label>
                     <input
@@ -60,13 +61,14 @@
                 />
                 </div>
                 <button class="button_header" type="submit" value="Enviar" @click="sendEmail">
-                    <img width="48" height="48" src="https://img.icons8.com/color/48/old-sofa.png" alt="old-sofa">
+                    <img width="48" height="48" src="https://img.icons8.com/color/48/open-envelope.png" alt="open-envelope"/>
                     <router-link to="/contact">Enviar formulario</router-link>
                 </button>  
-            </form>
-            <div class="sweet-alert" v-else>
-                <p>Tu formulario ha sido enviado con éxito. <br>¡Gracias por tu mensaje!</p>
+                </form>
             </div>
+            <!-- <div class="sweet-alert" v-else>
+                <p>Tu formulario ha sido enviado con éxito. <br>¡Gracias por tu mensaje!</p>
+            </div> -->
         </div>
     </section>
 
@@ -107,6 +109,14 @@
 .section-contact {
     background-color: #FDEA8D;
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    padding-bottom: 1.5rem;
+}
+
+.prices-top, .prices-bottom {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -114,12 +124,11 @@
 }
 
 .contact-form {
-    margin: 1.5rem 1.5rem;
     background-color: #D2691E;
     border-radius: 60px;
-    width: 50rem;
+    width: 35rem;
     height: auto;
-    padding: 4rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,7 +149,7 @@
     font-family: "Nunito Sans", sans-serif;
     font-size: 1rem;
     padding-left: 1rem;
-    margin: 1rem 0;
+    margin: .5rem 0;
 }
 
 .input-placeholder {
@@ -151,7 +160,7 @@
     font-family: "Nunito Sans", sans-serif;
     font-size: 1rem;
     padding-left: 1rem;
-    margin: 1rem 0;
+    margin: .5rem 0;
     
 }
 
