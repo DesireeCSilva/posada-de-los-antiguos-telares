@@ -10,7 +10,7 @@
             <iframe src="https://www.youtube.com/embed/HHHHnCOXFxg?si=-sWcpMkjr4KTvaxT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <iframe src="https://www.youtube.com/embed/b4cHJTjUbDs?si=AXt9zDFFxoNf-5q2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <a href="http://www.atanzon.com/" target="_blank">http://www.atanzon.com/</a>
+        <a style="color: #000; margin: 2rem 0; text-decoration: none" href="http://www.atanzon.com/" target="_blank">http://www.atanzon.com/</a>
     </section>
 </template>
 
@@ -51,9 +51,5 @@
         filter: sepia(100%); 
     }
 }
-
-
-
-
 
 </style>

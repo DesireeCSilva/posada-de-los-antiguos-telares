@@ -58,13 +58,17 @@
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-between;
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
     gap: 2rem;
 }
 
 .indoors-image {
-    width: 17rem;
-    height: auto;
+    width: 18rem;
+    height: 10rem;
+}
+
+.indoors-bottom button {
+    margin: 1rem 0 1.5rem 0;
 }
 
 </style>
